@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="636.0" prefWidth="823.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="crypttext.Symetriq_mainController">
+    <children>
+      <Button layoutX="200.0" layoutY="331.0" mnemonicParsing="false" onAction="#chiffrage" prefHeight="52.0" prefWidth="234.0" style="-fx-background-color: #E1E6EE;" text="Chiffrement">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="453.0" layoutY="331.0" mnemonicParsing="false" onAction="#dechiffrage" prefHeight="52.0" prefWidth="234.0" style="-fx-background-color: #E1E6EE;" text="Dechiffrement">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </Button>
+      <Text fill="#d0cdcd" layoutX="277.0" layoutY="98.0" stroke="#e11818" strokeType="OUTSIDE" strokeWidth="0.0" text="Chiffrement avec clé choisie" underline="true">
+         <font>
+            <Font name="Impact" size="23.0" />
+         </font>
+      </Text>
+      <Button layoutX="252.0" layoutY="169.0" mnemonicParsing="false" onAction="#FileChooser" text="Prendre un fichier">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="key" layoutX="334.0" layoutY="259.0" onKeyPressed="#sizePrint" onMouseClicked="#sizePrint" prefHeight="28.0" prefWidth="200.0" />
+      <Label fx:id="patchFile" layoutX="374.0" layoutY="169.0" prefHeight="25.0" prefWidth="295.0" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="386.0" layoutY="589.0" mnemonicParsing="false" onAction="#backSymetriqMainToMain" text="Retour" />
+      <Label fx:id="error" layoutX="252.0" layoutY="426.0" prefHeight="17.0" prefWidth="408.0" textFill="#dd1d1d" />
+      <Button fx:id="closeButton" layoutX="771.0" mnemonicParsing="false" onAction="#handleCloseButtonAction" text="Fermer" />
+   </children>
+</AnchorPane>
